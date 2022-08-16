@@ -36,7 +36,7 @@ const Navbar = () => {
       id="navbar"
       className="py-[25px] fixed top-0 w-full flex justify-between items-center"
     >
-      <div className="flex items-center mt-10 md:mt-0 w-full md:w-auto justify-between">
+      <div className="flex items-center mt-2 md:mt-0 w-full md:w-auto justify-between">
         <a
           href="/"
           className="flex items-center md:ml-[50px] lg:ml-[120px] ml-[30px]"
