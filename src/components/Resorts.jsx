@@ -18,7 +18,7 @@ const resortVariants = {
 
 const Resorts = () => {
   return (
-    <div className="mb-[124px] md:mb-[136px] px-4">
+    <div className="mb-[124px] md:mb-[136px] px-4 overflow-hidden">
       <h2 className="text-[28px] md:text-5xl font-semibold leading-8 md:leading-[65px] mt-[100px] md:ml-4 xl:ml-[120px] mb-4 md:mb-[72px] w-[302px] md:w-[570px] p-4 md:p-0">
         The best resorts to chill and relax
       </h2>
@@ -26,7 +26,7 @@ const Resorts = () => {
         {resorts.map((resort) => (
           <div
             key={resort.id}
-            className="resort relative overflow-hidden max-h-screen rounded-[20px] pb-20 md:pb-[65px] lg:pb-0"
+            className="resort relative overflow-hidden max-h-screen rounded-[20px] pb-20 md:pb-[65px] lg:pb-[30px]"
           >
             <img src={resort.src} alt={resort.title} className="w-full block" />
             <motion.div

@@ -15,7 +15,7 @@ const headerVariants = {
     scale: 1,
     transition: {
       type: "tween",
-      delay: 0.5,
+      delay: 1.5,
       duration: 0.5,
     },
   },
@@ -33,7 +33,7 @@ const Header = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h1 className="capitalize font-bold text-[32px] md:text-[56px] tracking-tight text-white md:leading-[72.8px]">
+          <h1 className="capitalize font-bold text-[42px] md:text-[56px] tracking-tight text-white md:leading-[72.8px]">
             Plan the perfect winter trip
           </h1>
           <p className="font-normal text-14 md:text-[22px] md:mt-7 mt-2 md:leading-[34px] lg:px-[86px] xl:px-[136px] text-white w-2/4">

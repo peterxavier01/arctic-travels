@@ -19,7 +19,7 @@ const passesVariants = {
 
 const Passes = () => {
   return (
-    <div className="bg-passes pl-7 md:pl-[120px] pt-[76px] md:pt-[152px]">
+    <div className="bg-passes pl-7 md:pl-[120px] pt-[76px] md:pt-[152px] overflow-hidden">
       <motion.div
         variants={passesVariants}
         initial="hidden"
