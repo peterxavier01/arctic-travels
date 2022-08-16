@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const passesVariants = {
   hidden: {
-    x: "-500px",
+    x: "-50px",
     opacity: 0,
   },
   visible: {
