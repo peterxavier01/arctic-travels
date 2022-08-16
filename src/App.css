@@ -1,0 +1,107 @@
+/********* Scrollbar Styles ************/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.btn {
+  transform: scale(1);
+  transition: 150ms all;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+/********* Navbar Styles **********/
+.nav-scrolled {
+  background-color: #fff;
+  padding: 20px 0 !important;
+  z-index: 5 !important;
+  transition: 0.3s ease-in;
+}
+
+.nav-scrolled a,
+.nav-scrolled p,
+.nav-scrolled .hamburger {
+  color: hsl(220, 9%, 26%);
+}
+
+/********* Header Styles ************/
+.header {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.580838) 32.24%,
+      rgba(0, 0, 0, 0.486293) 62.09%,
+      rgba(0, 0, 0, 0) 98.06%
+    ),
+    url(./assets//hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 780px;
+  background-position: center;
+}
+
+.overlay {
+  background: rgba(5, 41, 97, 0.75);
+  backdrop-filter: blur(40px);
+}
+
+.box-shadow {
+  box-shadow: 0px 134px 193px rgba(183, 183, 183, 0.07),
+    0px 16.7789px 24.1666px rgba(183, 183, 183, 0.035);
+}
+
+.drop-shadow {
+  box-shadow: 0px 16.778879165649414px 24.166595458984375px 0px #b7b7b709;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.map {
+  background-image: url(./assets/map-svg.svg);
+  background-color: #f8f9fc;
+}
+
+/********* Regions Styles *********/
+.bg-regions {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+}
+
+.swiper-slide {
+  transition-duration: 2000ms !important;
+}
+
+/********* Resort Styles ***********/
+@media screen and (min-width: 768px) {
+  .resort:nth-child(2),
+  .resort:nth-child(4) {
+    margin-top: -200px;
+  }
+}
+
+.bg-resorts {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.563442) 60.97%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+/********* Passes Styles ***********/
+.bg-passes {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./assets//footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
