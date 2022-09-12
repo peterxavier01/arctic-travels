@@ -1,20 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import Button from "./Button";
 import { resorts } from "../data";
-
-const resortVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
 
 const Resorts = () => {
   return (
@@ -29,27 +16,24 @@ const Resorts = () => {
             className="resort relative overflow-hidden max-h-screen rounded-[20px] pb-20 md:pb-[65px] lg:pb-[30px]"
           >
             <img src={resort.src} alt={resort.title} className="w-full block" />
-            <motion.div
-              className="absolute w-full top-0 pt-[100%] h-full bg-resorts px-6 text-white"
-              variants={resortVariants}
-              initial="hidden"
-              whileHover="visible"
-            >
-              <p className="font-semibold text-2xl md:text-[28px] mb-4">
-                {resort.title}
-              </p>
-              <p className="font-medium text-lg leading-7 mb-7">
-                {resort.body}
-              </p>
-              <Button
-                width="100%"
-                height={64}
-                text="Book Now"
-                color="#fff"
-                bgColor="#3E86F5"
-                fontSize="16px"
-              />
-            </motion.div>
+            <div className="absolute w-full top-0 pt-[100%] h-full bg-resorts px-6 text-white opacity-100 resorts-content-wrapper">
+              <div className="flex flex-col relative -top-1/2">
+                <p className="font-semibold text-2xl md:text-[28px] mb-4">
+                  {resort.title}
+                </p>
+                <p className="font-medium text-lg leading-7 mb-7">
+                  {resort.body}
+                </p>
+                <Button
+                  width="100%"
+                  height={64}
+                  text="Book Now"
+                  color="#fff"
+                  bgColor="#3E86F5"
+                  fontSize="16px"
+                />
+              </div>
+            </div>
           </div>
         ))}
       </div>

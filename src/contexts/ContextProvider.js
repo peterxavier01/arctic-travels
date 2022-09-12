@@ -2,7 +2,6 @@ import { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
-
 export const ContextProvider = ({ children }) => {
   const [sidebarActive, setSidebarActive] = useState(false);
 
@@ -10,7 +9,7 @@ export const ContextProvider = ({ children }) => {
     <StateContext.Provider
       value={{
         sidebarActive,
-        setSidebarActive
+        setSidebarActive,
       }}
     >
       {children}

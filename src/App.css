@@ -97,6 +97,18 @@
   );
 }
 
+@media (hover: hover) {
+  .resorts-content-wrapper {
+    opacity: 0;
+  }
+
+  .resorts-content-wrapper:hover {
+    opacity: 1;
+    transition: ease-in-out 500ms;
+    transition-delay: 55ms;
+  }
+}
+
 /********* Passes Styles ***********/
 .bg-passes {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
