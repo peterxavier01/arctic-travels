@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import Logo from "../assets/main-logo.svg";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -7,34 +7,33 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const Navbar = () => {
   const { setSidebarActive } = useStateContext();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const isNavScrolled = () => {
+    const scrolled = document.documentElement.scrollTop;
+
+    if (scrolled > 10) {
+      setIsScrolled(true);
+    }
+
+    if (scrolled <= 0) {
+      setIsScrolled(false);
+    }
+  };
 
   useEffect(() => {
-    const navbar = document.getElementById("navbar");
-    const header = document.getElementById("header");
+    window.addEventListener("scroll", isNavScrolled);
 
-    const navOptions = {
-      root: null,
-      threshold: 0,
-      rootMargin: "-650px 0px 0px 0px",
-    };
-
-    const navObserver = new IntersectionObserver((entries, navObserver) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          navbar?.classList?.add("nav-scrolled");
-        } else {
-          navbar?.classList?.remove("nav-scrolled");
-        }
-      });
-    }, navOptions);
-
-    navObserver.observe(header);
+    // eslint-disable-next-line no-unused-expressions
+    () => window.removeEventListener("scroll", isNavScrolled);
   });
 
   return (
     <div
       id="navbar"
-      className="py-[25px] fixed top-0 w-full flex justify-between items-center"
+      className={`${
+        isScrolled ? "nav-scrolled" : ""
+      } py-[25px] fixed top-0 w-full flex justify-between items-center`}
     >
       <div className="flex items-center mt-2 md:mt-0 w-full md:w-auto justify-between">
         <a
